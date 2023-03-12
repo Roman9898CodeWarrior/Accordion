@@ -1,0 +1,119 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: rgba(108, 230, 225, 0.4);
+    font-weight: bold;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+.faq {
+    max-width: 1100px;
+    margin: 50px auto;
+    cursor: pointer;
+}
+
+.faq-mtitle {
+    display: block;
+    font-size: 32px;
+    border-bottom: 1px solid black;
+}
+
+.faq-input {
+    width: 0;
+    height: 0;
+    -webkit-appearance: none;
+    appearance: none;
+    position: absolute;
+}
+
+.faq-item {
+    display: block;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+}
+
+.faq-title {
+    display: block;
+    color: blue;
+    padding: 10px 15px;
+    position: relative;
+    transition: all 1s;
+}
+
+.faq-title:after {
+    content: "";
+    display: none;
+    border-style: solid;
+    border-width: 8px 5px 0 5px;
+    border-color: black transparent transparent transparent;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all .5s;
+}
+
+.faq-text {
+    max-height: 0;
+	overflow: hidden;
+	transition: .3s;
+}
+
+img {
+    display: block;
+    margin: 20px auto;
+    height: 60%;
+    width: 60%;
+}
+
+.faq:hover .faq-title:after {
+    display: block;
+}
+
+.faq:hover .faq-title {
+    color: black;
+}
+
+.faq-item:hover .faq-title:after {
+    border-style: solid;
+    border-width: 0 5px 8px 5px;
+    border-color: transparent transparent black transparent;
+}
+
+.faq-item:hover .faq-text {
+    max-height: 1000px;
+    transition: 1s;
+}
+
+.faq-input:checked ~ .faq-title {
+    color: black;
+}
+
+.faq-input:checked ~ .faq-title:after {
+    border-style: solid;
+    border-width: 0 5px 8px 5px;
+    border-color: transparent transparent black transparent;
+}
+
+.faq-input:checked ~ .faq-text {
+    max-height: 1000px;
+    transition: 1s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
